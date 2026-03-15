@@ -15,7 +15,7 @@ website:
     foreground: "#e8f4f8"
     title: false
     left:
-      - text: "Ancient Oceans"
+      - text: "Discover Earth's Ancient Oceans"
         href: index.qmd
     right:
       - text: "About"
