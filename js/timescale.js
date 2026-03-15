@@ -160,7 +160,7 @@ const TS = {
       { n: "Gelasian",     s: 2.58,   e: 1.8,    c: "#f9f97f" },
       { n: "Calabrian",    s: 1.8,    e: 0.781,  c: "#f9f97f" },
       { n: "Chibanian",    s: 0.781,  e: 0.1265, c: "#f9f97f" },
-      { n: "Late Pleist.", s: 0.1265, e: 0.0117, c: "#f9f97f" },
+      { n: "Late Pleistocene", s: 0.1265, e: 0.0117, c: "#f9f97f" },
       { n: "Greenlandian", s: 0.0117, e: 0.0082, c: "#f9f97f" },
       { n: "Northgrippian",s: 0.0082, e: 0.0042, c: "#f9f97f" },
       { n: "Meghalayan",   s: 0.0042, e: 0.00726,c: "#f9f97f" },
