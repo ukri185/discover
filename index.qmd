@@ -1,0 +1,56 @@
+---
+title: "Ancient Oceans"
+description: "4.5 billion years of Earth's ocean history"
+---
+
+```{=html}
+<div id="hero">
+  <canvas id="hc"></canvas>
+  <div class="hcontent">
+    <p class="eyebrow">A journey through deep time</p>
+    <h1 class="htitle">Ancient Oceans</h1>
+    <p class="hsub">4.5 billion years of Earth's ocean history — from the first seas of a molten world to the reefs that face an uncertain future.</p>
+    <p class="hauthors">Lewis A. Jones &amp; Stephen Pates</p>
+  </div>
+  <div class="scue" id="scue"><span>Scroll to begin</span><div class="sarr"></div></div>
+</div>
+
+<div id="tlc">
+  <aside id="gsb" aria-label="Geological timescale">
+    <div class="sbh">Timescale</div>
+    <div id="gtd"></div>
+    <div class="sbf">
+      <span class="mv" id="sbmv">4500</span>
+      <span class="ml" id="sbml">Ma ago</span>
+    </div>
+  </aside>
+  <main id="evcol" role="main" aria-label="Ocean events through geological time"></main>
+  <nav id="evnav" aria-label="Navigate between events">
+    <button class="nb" id="nprev" disabled aria-label="Previous event">
+      <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+    <span class="nct" id="nct">1/—</span>
+    <button class="nb" id="nnext" aria-label="Next event">
+      <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+  </nav>
+</div>
+
+<div id="tdl" class="hid" aria-hidden="true">
+  <div class="dlc"></div>
+  <div class="dli"></div>
+  <div class="dlc"></div>
+</div>
+
+<div id="ftw" class="hid" role="status" aria-live="polite">
+  <div class="tpill">
+    <span class="tv" id="ftv">4,500</span>
+    <span class="tu" id="ftu">Ma ago</span>
+  </div>
+  <span class="tpn" id="ftpn">Hadean</span>
+</div>
+
+<script src="js/timescale.js"></script>
+<script src="js/events.js"></script>
+<script src="js/main.js"></script>
+```

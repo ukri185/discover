@@ -1,0 +1,50 @@
+project:
+  type: website
+  output-dir: docs
+  resources:
+    - images/
+  pre-render: Rscript generate_events.R
+
+website:
+  title: "Ancient Oceans"
+  description: "4.5 billion years of Earth's ocean history"
+
+  navbar:
+    search: false
+    background: "#020c18"
+    foreground: "#e8f4f8"
+    title: false
+    left:
+      - text: "Ancient Oceans"
+        href: index.qmd
+    right:
+      - text: "About"
+        href: about.qmd
+      - text: "Contribute"
+        href: contribute.qmd
+  sidebar: false
+
+  page-footer:
+    background: "#010810"
+    border: true
+    left: |
+      © 2025 Lewis A. Jones & Stephen Pates — Ancient Oceans.
+      Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+    center: |
+      Funded by [NERC](https://www.ukri.org/councils/nerc/) · Grant No. UKRI185
+    right: |
+      Built with [Quarto](https://quarto.org)
+
+format:
+  html:
+    theme: [darkly, css/custom.scss]
+    css: css/styles.css
+    toc: false
+    number-sections: false
+    author:
+      - name: Lewis A. Jones
+        orcid: 0000-0003-3902-8986
+        url: https://lewisajones.com
+      - name: Stephen Pates
+        orcid: 0000-0001-8063-9469
+        url: https://www.stephenpates.com

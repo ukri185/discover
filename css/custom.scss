@@ -1,0 +1,93 @@
+/*-- scss:defaults --*/
+
+// ── Colour tokens ──────────────────────────────────────────────────────────
+$body-bg:          #020c18;
+$body-color:       #e8f4f8;
+$link-color:       #00c8e0;
+$navbar-bg:        #020c18;
+$navbar-fg:        #e8f4f8;
+$navbar-hl:        #00c8e0;
+$footer-bg:        #010810;
+$footer-fg:        #7ab3c8;
+
+/*-- scss:rules --*/
+
+// ── Font ───────────────────────────────────────────────────────────────────
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 300;
+  background: #020c18;
+  color: #e8f4f8;
+}
+
+// ── Navbar ─────────────────────────────────────────────────────────────────
+.navbar {
+  background-color: #020c18 !important;
+  border-bottom: 1px solid rgba(0, 200, 224, 0.15);
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem !important;
+  color: #00c8e0 !important;
+  text-transform: none;
+  letter-spacing: 0.04em;
+}
+.navbar-nav .nav-link { color: #7ab3c8 !important; }
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active { color: #e8f4f8 !important; }
+
+// Frost on scroll — JS adds .scrolled to #quarto-header
+#quarto-header.scrolled .navbar {
+  background-color: rgba(2, 12, 24, 0.92) !important;
+  backdrop-filter: blur(14px);
+}
+
+// ── Footer ─────────────────────────────────────────────────────────────────
+.nav-footer {
+  background-color: #010810 !important;
+  border-top: 1px solid rgba(0, 200, 224, 0.12) !important;
+  color: #7ab3c8 !important;
+  font-size: 0.78rem;
+}
+.nav-footer a { color: #00c8e0 !important; text-decoration: none; }
+.nav-footer a:hover { text-decoration: underline; }
+.nav-footer-left, .nav-footer-center, .nav-footer-right { color: #7ab3c8 !important; }
+
+// ── Hide Quarto chrome we don't want ───────────────────────────────────────
+#quarto-sidebar,
+#quarto-margin-sidebar {
+  display: none !important;
+}
+
+// On the index page, the raw HTML block sits inside Quarto's content container.
+// Break it out so #hero and #tlc fill the full viewport width.
+// Also suppress the page title Quarto auto-injects above the content.
+#quarto-document-content > h1.title,
+#quarto-document-content > .quarto-title-block,
+#quarto-document-content > p.description {
+  display: none !important;
+}
+
+// Make the content wrapper transparent and full-width for the index page
+// (normal max-width container would clip our full-viewport layout)
+main.content:has(#hero) {
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+// Quarto page columns — allow our full-width content to overflow the container
+.page-columns:has(#hero) {
+  display: block !important;
+  grid-template-columns: none !important;
+}
+
+// ── Scrollbar ──────────────────────────────────────────────────────────────
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #010810; }
+::-webkit-scrollbar-thumb { background: #063a5c; border-radius: 2px; }
