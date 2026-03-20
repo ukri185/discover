@@ -52,7 +52,11 @@ body {
 }
 .hauthors {
   font-size: 0.82rem; color: var(--amber); letter-spacing: 0.12em;
-  text-transform: uppercase; animation: fu 1s 0.9s both; margin-bottom: 1.5rem;
+  text-transform: uppercase; animation: fu 1s 0.9s both; margin-bottom: 1.25rem;
+}
+.hcontributors {
+  font-size: 0.6rem; color: var(--amber); letter-spacing: 0.12em;
+  text-transform: uppercase; animation: fu 1s 0.9s both; margin-bottom: 1rem;
 }
 /* scue: fixed to viewport bottom, centred on full viewport (no sidebar during hero) */
 .scue {
