@@ -79,7 +79,7 @@ for (i in seq_len(n)) {
     "  {",
     sprintf('    mya: %s,',     as.character(e$mya)),
     sprintf('    title: "%s",', js_str(e$title)),
-    sprintf('    image: "images/%s",', js_str(e$image)),
+    sprintf('    image: "%s",', js_str(e$image)),
     sprintf('    cap: "%s",',   js_str(e$caption)),
     sprintf('    detail: `%s`,',detail_html),
     sprintf('    eon: "%s",',   js_str(e$eon)),

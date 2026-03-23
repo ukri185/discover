@@ -4,4 +4,18 @@ title: "About"
 
 ## About Ancient Oceans
 
-This is an about page... do we want/need an about page? 
+Ancient Oceans is an interactive web experience created by Lewis A. Jones. It's a scrolling journey that takes you through 4.5 billion years of Earth's ocean history — from the first seas of a molten world to the reefs that face an uncertain future.
+
+The concept is simple: just scroll. But that single action carries you across deep time, past mass extinctions, vanished seaways, and oceans that once looked nothing like the ones we know today. The unimaginable, it turns out, was once reality.
+
+Built with contributions from expert scientists, Ancient Oceans weaves together storytelling, science, and discovery — a living chronicle of the waters that shaped life on Earth.
+
+## Contributors
+
+The stories behind Earth's past oceans are best told by those who study them. Ancient Oceans draws on the expertise of scientists working across palaeoceanography, palaeontology, and Earth history — each contributing events, context, and insight that bring the deep past to life for a general audience. Their involvement is what makes Ancient Oceans both accessible and trustworthy.
+
+Without such contributions, Anicent Oceans would surely be a lesser self.
+
+- Dr Stephen Pates, University College London
+
+

@@ -1,5 +1,30 @@
 (function () {
   'use strict';
+  
+    // ---------------------------------------------------------------------------
+  // SVG placeholder generator
+  // ---------------------------------------------------------------------------
+  function makeSVG(evt) {
+    const c = evt.color || '#1a6080';
+    const t = evt.title.split(' ').slice(0, 3).join(' ');
+    const mya = evt.mya >= 1000 ? (evt.mya / 1000).toFixed(1) + ' Ga' : evt.mya + ' Ma';
+    const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'>
+      <defs>
+        <radialGradient id='g${evt.mya}' cx='50%' cy='50%' r='70%'>
+          <stop offset='0%' stop-color='${c}' stop-opacity='0.35'/>
+          <stop offset='100%' stop-color='#010810'/>
+        </radialGradient>
+      </defs>
+      <rect width='400' height='300' fill='#020c18'/>
+      <rect width='400' height='300' fill='url(#g${evt.mya})'/>
+      <circle cx='200' cy='130' r='48' fill='none' stroke='${c}' stroke-width='1' opacity='0.5'/>
+      <circle cx='200' cy='130' r='32' fill='${c}' opacity='0.18'/>
+      <text x='200' y='136' font-family='Georgia,serif' font-size='13' fill='${c}' text-anchor='middle' opacity='0.9'>${mya}</text>
+      <text x='200' y='210' font-family='Georgia,serif' font-size='14' fill='#b0ccd8' text-anchor='middle'>${t}</text>
+      <text x='200' y='228' font-family='Georgia,serif' font-size='11' fill='#5a8a9a' text-anchor='middle' font-style='italic'>placeholder image</text>
+    </svg>`;
+    return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+  }
 
   // ---------------------------------------------------------------------------
   // Hero canvas: animated bioluminescent particles
