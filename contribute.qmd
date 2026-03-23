@@ -2,6 +2,8 @@
 title: "Contribute"
 ---
 
+::: {.justify}
+
 ## How to Contribute
 
 Ancient Oceans grows with every contribution — and there are many ways to help, whatever your background or expertise.
@@ -13,3 +15,5 @@ Ancient Oceans grows with every contribution — and there are many ways to help
 All contributions, large and small, are deeply appreciated and help make Ancient Oceans a richer, more complete journey through deep time.
 
 Ready to get involved? Reach out at [Lewis.Jones@ucl.ac.uk](mailto:Lewis.Jones@ucl.ac.uk)
+
+:::

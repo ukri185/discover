@@ -18,6 +18,10 @@ body {
   line-height: 1.7;
 }
 
+.justify {
+  text-align: justify !important
+}
+
 /* Quarto chrome — see css/custom.scss */
 
 ::-webkit-scrollbar { width: 4px; }
