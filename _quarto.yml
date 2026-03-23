@@ -19,9 +19,9 @@ website:
         href: index.qmd
     right:
       - text: "About"
-        href: about.qmd
+        href: about/index.qmd
       - text: "Contribute"
-        href: contribute.qmd
+        href: contribute/index.qmd
   sidebar: false
 
   page-footer:
