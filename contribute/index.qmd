@@ -3,15 +3,25 @@ title: "Contribute"
 listing:
   contents: "*/index.qmd"
   type: grid
-  grid-columns: 3
-  image-height: "220px"
+  grid-columns: 5
+  image-height: "200px"
   fields: [image, title, date, description]
   sort: "date desc"
-  categories: true
-page-layout: article
+  categories: false
+page-layout: full
 ---
 
-## How to Contribute
+## About Ancient Oceans
+
+::: {.justify}
+
+Ancient Oceans is an interactive web experience by [Lewis A. Jones](https://www.lewisajones.com). It's a scrolling journey that takes you through 4.5 billion years of Earth's ocean history — from the first seas of a molten world to the reefs that face an uncertain future.
+
+The concept is simple: just scroll. That single action carries you across deep time, past mass extinctions, vanished seaways, and oceans that once looked nothing like the ones we know today.
+
+Built with contributions from expert scientists, Ancient Oceans weaves together storytelling, science, and discovery.
+
+## Contributors
 
 Ancient Oceans grows with every contribution — and there are many ways to help, whatever your background or expertise.
 
@@ -23,4 +33,4 @@ All contributions, large and small, are deeply appreciated and help make Ancient
 
 Ready to get involved? Reach out at [Lewis.Jones@ucl.ac.uk](mailto:Lewis.Jones@ucl.ac.uk)
 
-## Contributors
+:::
