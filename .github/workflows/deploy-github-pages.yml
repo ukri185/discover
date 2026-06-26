@@ -2,9 +2,6 @@ on:
   workflow_dispatch:
   push:
     branches: main
-  schedule:
-    # Every day at 8am
-    - cron: "0 8 * * *"
 
 name: Deploy to Github Pages
 

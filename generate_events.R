@@ -18,9 +18,7 @@ row.names(events) <- NULL
 # Set image directory
 events$image[events$image != ""] <- paste0("images/", events$image[events$image!=""])
 # Set contributor
-events$body<- paste0(events$body, "<br><br>", "Contributed by: ",
-                     paste0("<a href='mailto:", events$contact, "'>",
-                            events$contributor, "</a>"))
+events$body<- paste0(events$body, "<br><br>", "Contributed by: ", events$contributor)
 # Set licensing
 events$license <- gsub(pattern = "CC BY-SA 4.0", 
                        replacement = "<a href='https://creativecommons.org/licenses/by-sa/4.0/deed.en'>CC BY-SA 4.0</a>",
