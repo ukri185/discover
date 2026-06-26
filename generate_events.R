@@ -15,27 +15,37 @@ events <- read.csv("events.csv", stringsAsFactors = FALSE, na.strings = "",
 events[is.na(events)] <- ""
 events <- events[order(-as.numeric(events$mya)), ]
 row.names(events) <- NULL
-
+# Set image directory
+events$image[events$image != ""] <- paste0("images/", events$image[events$image!=""])
+# Set contributor
+events$body<- paste0(events$body, "<br><br>", "Contributed by: ",
+                     paste0("<a href='mailto:", events$contact, "'>",
+                            events$contributor, "</a>"))
+# Set licensing
+events$license <- gsub(pattern = "CC BY-SA 4.0", 
+                       replacement = "<a href='https://creativecommons.org/licenses/by-sa/4.0/deed.en'>CC BY-SA 4.0</a>",
+                       x = events$license)
+events$caption <- paste0(events$caption, " License: ", events$license)
 # Escape helpers --------------------------------------------------------
 js_str <- function(x) {
   x <- gsub("\\\\", "\\\\\\\\", x)
-  x <- gsub('"',    '\\\\"',     x, fixed = TRUE)
+  x <- gsub('"', '\\\\"', x, fixed = TRUE)
   x <- gsub("\r?\n", " ", x)
   trimws(x)
 }
 js_tmpl <- function(x) {
   x <- gsub("\\\\", "\\\\\\\\", x)
-  x <- gsub("`",  "\\\\`",  x, fixed = TRUE)
-  x <- gsub("${", "\\${",   x, fixed = TRUE)
+  x <- gsub("`",  "\\\\`", x, fixed = TRUE)
+  x <- gsub("${", "\\${", x, fixed = TRUE)
   x <- gsub("\r?\n", " ", x)
   x <- gsub("[ \t]+", " ", x)
   trimws(x)
 }
 html_escape <- function(x) {
-  x <- gsub("&",  "&amp;",  x, fixed = TRUE)
-  x <- gsub("<",  "&lt;",   x, fixed = TRUE)
-  x <- gsub(">",  "&gt;",   x, fixed = TRUE)
-  x <- gsub('"',  "&quot;", x, fixed = TRUE)
+  x <- gsub("&", "&amp;", x, fixed = TRUE)
+  x <- gsub("<", "&lt;", x, fixed = TRUE)
+  x <- gsub(">", "&gt;", x, fixed = TRUE)
+  x <- gsub('"', "&quot;", x, fixed = TRUE)
   x
 }
 # Build html from plain text --------------------------------------------
@@ -45,12 +55,12 @@ make_detail <- function(e) {
   # Split body into paragraphs on ||
   paras  <- trimws(strsplit(e$body, "\\|\\|")[[1]])
   paras  <- paras[nchar(paras) > 0]
-  p_html <- paste0("<p>", html_escape(paras), "</p>", collapse = " ")
+  p_html <- paste0("<p>", paras, "</p>", collapse = " ")
 
   # Build etag string: "Eon: X · Era: Y · Period: Z" (omit blank levels)
   parts <- c()
-  if (nchar(trimws(e$eon))    > 0) parts <- c(parts, paste0("Eon: ",    trimws(e$eon)))
-  if (nchar(trimws(e$era))    > 0) parts <- c(parts, paste0("Era: ",    trimws(e$era)))
+  if (nchar(trimws(e$eon)) > 0) parts <- c(parts, paste0("Eon: ", trimws(e$eon)))
+  if (nchar(trimws(e$era)) > 0) parts <- c(parts, paste0("Era: ", trimws(e$era)))
   if (nchar(trimws(e$period)) > 0) parts <- c(parts, paste0("Period: ", trimws(e$period)))
   etag <- if (length(parts) > 0) paste(parts, collapse = " \u00b7 ") else ""
 
@@ -77,15 +87,15 @@ for (i in seq_len(n)) {
 
   out <- c(out,
     "  {",
-    sprintf('    mya: %s,',     as.character(e$mya)),
-    sprintf('    title: "%s",', js_str(e$title)),
-    sprintf('    image: "%s",', js_str(e$image)),
-    sprintf('    cap: "%s",',   js_str(e$caption)),
-    sprintf('    detail: `%s`,',detail_html),
-    sprintf('    eon: "%s",',   js_str(e$eon)),
-    sprintf('    era: "%s",',   js_str(e$era)),
-    sprintf('    per: "%s",',   js_str(e$period)),
-    sprintf('    color: "%s"',  js_str(e$color)),
+    sprintf('mya: %s,',     as.character(e$mya)),
+    sprintf('title: "%s",', js_str(e$title)),
+    sprintf('image: "%s",', js_str(e$image)),
+    sprintf('cap: "%s",', js_str(e$caption)),
+    sprintf('detail: `%s`,', detail_html),
+    sprintf('eon: "%s",',   js_str(e$eon)),
+    sprintf('era: "%s",',   js_str(e$era)),
+    sprintf('per: "%s",',   js_str(e$period)),
+    sprintf('color: "%s"',  js_str(e$color)),
     paste0("  }", comma)
   )
 }

@@ -1,8 +1,15 @@
 ---
 title: "Contribute"
+listing:
+  contents: "*/index.qmd"
+  type: grid
+  grid-columns: 3
+  image-height: "220px"
+  fields: [image, title, date, description]
+  sort: "date desc"
+  categories: true
+page-layout: article
 ---
-
-::: {.justify}
 
 ## How to Contribute
 
@@ -16,4 +23,4 @@ All contributions, large and small, are deeply appreciated and help make Ancient
 
 Ready to get involved? Reach out at [Lewis.Jones@ucl.ac.uk](mailto:Lewis.Jones@ucl.ac.uk)
 
-:::
+## Contributors

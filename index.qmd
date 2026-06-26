@@ -11,7 +11,6 @@ description: "4.5 billion years of Earth's ocean history"
     <h1 class="htitle">Ancient Oceans</h1>
     <p class="hsub">4.5 billion years of Earth's ocean history — from the first seas of a molten world to the reefs that face an uncertain future.</p>
     <p class="hauthors">By Lewis A. Jones</p>
-    <p class="hcontributors">With contributions from Stephen Pates</p>
   </div>
   <div class="scue" id="scue"><span>Scroll to begin</span><div class="sarr"></div></div>
 </div>

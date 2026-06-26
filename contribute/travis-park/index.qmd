@@ -1,0 +1,15 @@
+---
+title: "Travis Park"
+description: "Palaeobiologist"
+image: "travis-park.jpg"
+categories: [Travis Park]
+page-layout: article
+---
+
+# Travis Park
+
+Travis Park is a palaeobiologist fascinated by phenotypic evolution, phylogeny, Earth's physical history, and how these have interacted to produce the diversity of life seen today. His research spans three main topics: 1) sensory biology; 2) macroevolutionary patterns; and 3) evolutionary morphology. He primarily uses marine mammals (e.g. whales, seals, sirenians) as model organisms, drawn to the wide range of ecological and morphological variation present in living species combined with their rich fossil record.
+
+Website: [https://www.travisparkpalaeo.com/](https://www.travisparkpalaeo.com/)
+
+![](travis-park.jpg){fig-align="center"}
