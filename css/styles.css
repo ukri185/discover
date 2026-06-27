@@ -196,10 +196,15 @@ body {
 }
 
 /* ── Event cards ── */
+.eiw:hover .epop { opacity: 1; transform: translateX(0); pointer-events: auto; }
+
 .ec {
-  position: relative; margin-bottom: 4.5rem;
-  opacity: 0; transform: translateY(28px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
+  position: relative;
+  z-index: 0;
+}
+.ec:has(.eiw:hover),
+.ec:has(.eiw:focus-within) {
+  z-index: 10;
 }
 .ec.vis { opacity: 1; transform: translateY(0); }
 .eam { display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.85rem; }
@@ -235,6 +240,10 @@ body {
   backdrop-filter: blur(12px);
 }
 .eiw:hover .epop { opacity: 1; transform: translateX(0); pointer-events: auto; }
+.eiw:hover,
+.eiw:focus-within {
+  z-index: 300;
+}
 .epop h3 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--bio); margin-bottom: 0.6rem; line-height: 1.3; }
 .epop p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; margin-bottom: 0.45rem; }
 .epop .etag { font-size: 0.7rem; color: var(--amber); font-style: normal; }
